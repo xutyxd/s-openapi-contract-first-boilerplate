@@ -4,6 +4,7 @@
   "description": "A boilerplate for building contract-first APIs in TypeScript with OpenAPI. Includes OpenAPI definition, compliant server setup, and npm package generation for seamless API development.",
   "scripts": {
     "tsc": "tsc --noEmit",
+    "entity:scaffold": "bash ./scripts/schematics/entity-scaffolding.sh",
     "openapi:bundle": "redocly bundle src/openapi/definition.json --output src/openapi/specification.json",
     "openapi:docs": "redocly build-docs src/openapi/specification.json --output public/index.html",
     "openapi:types": "openapi-typescript src/openapi/specification.json -o src/openapi/specification.d.ts",

@@ -94,38 +94,10 @@ A boilerplate for building contract-first APIs in TypeScript with OpenAPI. Inclu
         mkdir tests/units/new-entity
 
 3. Finally, add the new entity to the server
-    - Take a look at the `src/server/crosscutting/health-check` folder for an example
-    - Create the new folder scaffolding the entity
+    - Run next command to scaffold the entity
         ```bash
-        mkdir src/server/new-entity
-        mkdir src/server/new-entity/classes
-        mkdir src/server/new-entity/controllers
-        mkdir src/server/new-entity/interfaces
-        mkdir src/server/new-entity/repository
-        mkdir src/server/new-entity/schemas
-        mkdir src/server/new-entity/services
+        npm run entity:scaffold new-entity
         ```
-
-    - `src/server/new-entity/classes` Classes for entity
-        - **entity.class.ts** -> Class for domain layer
-        - **entity-api.class.ts** -> Class for api layer
-        - **entity-model.class.ts** -> Class for repository layer
-    - `src/server/new-entity/controllers` Controller for entity
-        - **entity.controller.ts** -> Extends EntityController with types and schemas
-    - `src/server/new-entity/interfaces` Interface for entity
-        - `/data/`**entity-api-data.interface.ts** -> Interface for api data layer
-        - `/data/`**entity-data.interface.ts** -> Interface for domain data layer
-        - `/data/`**entity-model-data.interface.ts** -> Interface for repository data layer
-        - `/dto/`**entity-api.interface.ts** -> Interface for class api layer
-        - `/dto/`**entity-model.interface.ts** -> Interface for class repository layer
-        - `/dto/`**entity.interface.ts** -> Interface for class domain layer
-     - `src/server/new-entity/repository` Repository for entity
-        - **entity.repository.ts** -> Extends EntityRepository with types and schemas
-    - `src/server/new-entity/schemas` Schema for entity
-        - **index.ts** -> Exports schemas
-    - `src/server/new-entity/services` Service for entity
-        - **entity.service.ts** -> Extends EntityService with types and repositories
-    - `src/server/new-entity/index.ts` Create a new container for the entity
     - `src/server/app.ts` Add the new entity to the container
 
 ## Dependencies
