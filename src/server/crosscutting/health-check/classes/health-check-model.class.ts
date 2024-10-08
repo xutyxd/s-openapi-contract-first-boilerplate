@@ -1,4 +1,3 @@
-import server from "../../..";
 import { EntityModel } from "../../common/classes";
 import { IHealthCheckData, IHealthCheckModelData } from "../interfaces/data";
 import { IHealthCheckModel } from "../interfaces/dto";
