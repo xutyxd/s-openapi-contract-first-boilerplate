@@ -157,7 +157,7 @@ export class EntityController<A extends IEntityAPIData, D extends IEntityData, M
             // Transform to data
             result = apiUpdated.toApi();
         } catch (error) {
-            const message = error instanceof BaseError ? error.message : 'Error updating file';
+            const message = error instanceof BaseError ? error.message : 'Error updating entity';
 
             const toInstance = error instanceof NotFoundError ? NotFoundResponse : InternalErrorResponse;
             const toThrow = new toInstance(message, context);
@@ -181,7 +181,7 @@ export class EntityController<A extends IEntityAPIData, D extends IEntityData, M
             // Transform to data
             result = apiEntity.toApi();
         } catch (error) {
-            const message = error instanceof BaseError ? error.message : 'Error deleting file';
+            const message = error instanceof BaseError ? error.message : 'Error deleting entity';
 
             const toInstance = error instanceof NotFoundError ? NotFoundResponse : InternalErrorResponse;
             const toThrow = new toInstance(message, context);
