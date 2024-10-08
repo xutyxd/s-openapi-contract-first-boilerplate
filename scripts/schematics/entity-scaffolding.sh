@@ -19,23 +19,23 @@ if [ -d "src/server/$1" ]; then
 fi
 
 # Create the new folder scaffolding for openapi
-function create_entity_openapi() {
-    local entity_name=$1
-    local entity_folder="src/openapi/$entity_name"
+# function create_entity_openapi() {
+#     local entity_name=$1
+#     local entity_folder="src/openapi/$entity_name"
 
-    # Create the new folder scaffolding the entity
-    mkdir $entity_folder
-    mkdir $entity_folder/examples
-    mkdir $entity_folder/models
-    mkdir $entity_folder/paths
-    mkdir $entity_folder/request
-}
+#     # Create the new folder scaffolding the entity
+#     mkdir $entity_folder
+#     mkdir $entity_folder/examples
+#     mkdir $entity_folder/models
+#     mkdir $entity_folder/paths
+#     mkdir $entity_folder/request
+# }
 
 # Create a new entity
 function create_entity_server() {
     local entity_name=$1
     local entity_folder="src/server/$entity_name"
-    local entity_test_folder="tests/units/$entity_name"
+    # local entity_test_folder="tests/units/$entity_name"
 
     # Create the new folder scaffolding the entity
     mkdir $entity_folder
@@ -47,7 +47,7 @@ function create_entity_server() {
     mkdir $entity_folder/repository
     mkdir $entity_folder/schemas
     mkdir $entity_folder/services
-    mkdir $entity_test_folder
+    # mkdir $entity_test_folder
 
     # Create the entity class
     touch $entity_folder/classes/$entity_name.class.ts
@@ -81,12 +81,12 @@ function create_entity_server() {
     touch $entity_folder/index.ts
 
     # Create the entity test
-    touch $entity_test_folder/entity.spec.ts
+    # touch $entity_test_folder/entity.spec.ts
 }
 
 # Create a new entity
 create_entity_server $1
-create_entity_openapi $1
+# create_entity_openapi $1
 
 echo "Scaffolding completed."
 
@@ -117,7 +117,7 @@ echo "Scaffolding completed."
 ./scripts/schematics/scaffolding/server/repository/entity.repository.sh $1
 
 # Create the entity schema
-./scripts/schematics/scaffolding/server/schemas/entity.schema.sh $1
+./scripts/schematics/scaffolding/server/schemas/index.sh $1
 
 # Create the entity service
 ./scripts/schematics/scaffolding/server/services/entity.service.sh $1
