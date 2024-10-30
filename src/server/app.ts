@@ -6,11 +6,11 @@ import { HTTPServer } from "server-over-express";
 import { ConfigurationContainer } from "./configuration";
 import { ConfigurationService } from "./configuration/services/configuration.service";
 import { CommonContainer } from './crosscutting/common';
+import { IEntityModelData } from './crosscutting/common/interfaces/data';
 import { Response } from "./crosscutting/common/responses/response.class";
 import { IDatabase } from './crosscutting/database/interfaces/database.interface';
 import { MemoryDatabaseService } from './crosscutting/database/services/memory-database.service';
 import { HealthCheckContainer, HealthCheckController } from "./crosscutting/health-check";
-import { IEntityModelData } from './crosscutting/common/interfaces/data';
 
 const App = class {
     public server: HTTPServer;
