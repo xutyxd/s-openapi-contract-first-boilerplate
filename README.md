@@ -40,8 +40,7 @@ A boilerplate for building contract-first APIs in TypeScript with OpenAPI. Inclu
 
 5. **Run the server:**
    ```bash
-   npm run start
-   npm run server:start
+   npm run start:local
    ```
 
 ## Project Structure
